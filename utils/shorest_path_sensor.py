@@ -7,6 +7,7 @@ import networkx as nx
 import json
 from pathlib import Path
 import igraph as ig
+from src.common.param import args
 
 
 SCENE_IDS = [
@@ -50,7 +51,7 @@ class ShortestPathSensor:
         self.load_scenes = load_scenes
 
         # build
-        # self.graphs, self.token_dicts = self._BuildNXGraphs(scene_ids=load_scenes)
+        self.graphs, self.token_dicts = self._BuildNXGraphs(scene_ids=load_scenes)
 
         # load only
         self.graphs, self.token_dicts = self._LoadNXGraphs(scene_ids=load_scenes)

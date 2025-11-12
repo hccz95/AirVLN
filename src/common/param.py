@@ -33,6 +33,9 @@ class Param:
 
         self.parser.add_argument('--inflection_weight_coef', type=float, default=1.9)
 
+        self.parser.add_argument('--ori_nav_graph_path', type=str, default=str(project_prefix / 'DATA/data/disceret/processed/nav_graph'), help="ori_nav_graph path")
+        self.parser.add_argument('--ori_token_dict_path', type=str, default=str(project_prefix / 'DATA/data/disceret/processed/token_dict'), help="ori_token_dict path")
+
         self.parser.add_argument('--nav_graph_path', type=str, default=str(project_prefix / 'DATA/data/disceret/processed/nav_graph_10'), help="nav_graph path")
         self.parser.add_argument('--token_dict_path', type=str, default=str(project_prefix / 'DATA/data/disceret/processed/token_dict_10'), help="token_dict path")
         self.parser.add_argument('--vertices_path', type=str, default=str(project_prefix / 'DATA/data/disceret/scene_meshes'))
